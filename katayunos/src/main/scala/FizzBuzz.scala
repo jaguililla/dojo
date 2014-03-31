@@ -1,11 +1,22 @@
 /**
- * Created by jam on 29/03/14.
+ *
  */
-object FizzBuzz {
-  def fizzBuzz = for (i <- 1 to 100) yield
-   if ((i % 5 == 0 && i % 3 == 0)  ||
-       (i.toString.contains(5) && i.toString.contains(3))) "FizzBuzz"
-    else if (i % 3 == 0 || i.toString.contains('3')) "Fizz"
-    else if (i % 5 == 0 || i.toString.contains('5')) "Buzz"
-    else i.toString
+object FizzBuzz extends App {
+  /**
+   *
+   * @return
+   */
+  def fizzBuzz = 1 to 100 map (
+    i => (i % 3, i % 5, i.toString.contains ('3'), i.toString.contains ('5')) match {
+      case (0, 0, _, _) => "FizzBuzz"
+      case (_, _, true, true) => "FizzBuzz"
+      case (0, _, _, _) => "Fizz"
+      case (_, _, true, false) => "Fizz"
+      case (_, 0, _, _) => "Buzz"
+      case (_, _, false, true) => "Buzz"
+      case _ => i.toString
+    }
+  )
+
+  fizzBuzz map (println _)
 }
