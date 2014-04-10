@@ -1,3 +1,5 @@
+package fizzbuzz.scala
+
 /**
  * http://www.solveet.com/exercises/Kata-FizzBuzz/11
  */
