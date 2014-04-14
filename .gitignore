@@ -1,1 +1,5 @@
+#
+# This file is ignored because of my global Git configuration, maybe is not needed in your
+# setup!
+#
 !/gradle/wrapper/gradle-wrapper.jar

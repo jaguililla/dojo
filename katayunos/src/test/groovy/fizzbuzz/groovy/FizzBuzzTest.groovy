@@ -1,38 +1,28 @@
 package fizzbuzz.groovy
 
-import org.junit.runner.RunWith
-import org.scalatest.FunSuite
-import org.scalatest.junit.JUnitRunner
+import org.junit.Test
 
-@RunWith (classOf [JUnitRunner]) // Required to work in Gradle
-class FizzBuzzTest extends FunSuite {
+class FizzBuzzTest {
 
-   test("Not divisible between 3 or 5 returns the number") {
-     assert (fizzBuzz(0) == "1")
-   }
+    @Test void notDivisibleBetween3Or5ReturnsTheNumber () {
+    }
 
-   test("Divisible between 3 returns 'Fizz'") {
-     assert (fizzBuzz(2) == "Fizz")
-   }
+    @Test void divisibleBetween3ReturnsFizz () {
+    }
 
-   test("If number contains 3 returns 'Fizz'") {
-     assert (fizzBuzz(30) == "Fizz")
-   }
+    @Test void ifNumberContains3ReturnsFizz () {
+    }
 
-   test("Divisible between 5 returns 'Buzz'") {
-     assert (fizzBuzz(4) == "Buzz")
-   }
+    @Test void divisibleBetween5ReturnsBuzz () {
+    }
 
-   test("If number contains 5 returns 'Buzz'") {
-     assert (fizzBuzz(51) == "Buzz")
-   }
+    @Test void ifNumberContains5ReturnsBuzz () {
+    }
 
-   test("If number contains 5 and 3 returns 'FizzBuzz'") {
-     assert (fizzBuzz(52) == "FizzBuzz")
-     assert (fizzBuzz(34) == "FizzBuzz")
-   }
+    @Test void ifNumberContains5And3ReturnsFizzBuzz () {
+    }
 
-   test("Divisible between 5 and 3 returns 'FizzBuzz'") {
-     assert (fizzBuzz(14) == "FizzBuzz")
-   }
- }
+    @Test void divisibleBetween5And3ReturnsFizzBuzz () {
+    }
+}
+
