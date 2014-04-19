@@ -17,9 +17,8 @@ friend!
 DIRECTORY STRUCTURE
 -------------------
 
-A module for each event
-
-A directory (module) for each event, or practice.
+A module (directory) for each event. Each module can have several packages for different
+practices.
 
 BUILD
 -----
@@ -29,8 +28,13 @@ gradle test
 LANGUAGES
 ---------
 
-Add support for other interesting languages like: Clojure (LISP), Ocalm (ML), Javascript,
-Ruby, Python
+Add support for other interesting languages like:
+
+* Clojure (LISP)
+* Ocalm (ML)
+* Javascript
+* Coffeescript
+* Python: https://wiki.python.org/moin/PythonTestingToolsTaxonomy
 
 Check hyperpolyglot
 
