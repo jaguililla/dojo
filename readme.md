@@ -11,8 +11,7 @@ projects, so this one is just for that.
 The module format will be: Gradle + Java + Groovy + Scala... if I add more languages,
 I'll add more build tools, candidates are Javascript, Coffeescript, Ruby, Python
 
-Practise leads to perfection, but perfection is not a goal, is a path. So keep practising my
-friend!
+Practise leads to perfection, but perfection is not a goal, is a path. Keep practising!
 
 DIRECTORY STRUCTURE
 -------------------
