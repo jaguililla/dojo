@@ -1,9 +1,12 @@
-package codebreaker.scala
+package katayunos
 
 import scala.util.Random.nextInt
 
-// If 'object' extends from 'App' vals won't be initialized WTF!
-object CodeBreaker {
+/**
+ * http://www.solveet.com/exercises/Kata-CodeBreaker/14
+ * TODO If 'object' extends from 'App' vals won't be initialized WTF!
+ */
+object SCodeBreaker {
   val CodeSize = 4
   val MaxAttempts = 15
   val CodeColors = Array ('R', 'M', 'A', 'V', 'N', 'I')
@@ -19,8 +22,8 @@ object CodeBreaker {
 
   def attempts = mAttempts
 
-  // Package private (only for tests)
-  private[scala] def reset {
+  // TODO Set as package private in default package (only for tests)
+  private[katayunos] def reset {
     mAttempts = 0
   }
 

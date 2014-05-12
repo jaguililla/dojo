@@ -1,11 +1,14 @@
-package fizzbuzz.java;
+package katayunos;
 
-import static fizzbuzz.java.FizzBuzz.fizzBuzz;
+import static katayunos.JFizzBuzz.fizzBuzz;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class FizzBuzzTest {
+/**
+ * TODO Static imports do not work in Java's default package: import static JFizzBuzz.*;
+ */
+public class JFizzBuzzTest {
 
     @Test public void notDivisibleBetween3Or5ReturnsTheNumber () {
         assertEquals (fizzBuzz ().get (0), "1");

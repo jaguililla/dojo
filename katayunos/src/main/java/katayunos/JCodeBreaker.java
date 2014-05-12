@@ -1,19 +1,23 @@
-package codebreaker.java;
+package katayunos;
+
+import static java.lang.System.nanoTime;
 
 import java.util.Random;
 
-class CodeBreaker {
-    static final Character [] CODE_COLORS = { 'R', 'M', 'A', 'V', 'N', 'I' };
+/**
+ * http://www.solveet.com/exercises/Kata-CodeBreaker/14
+ */
+public class JCodeBreaker {
+    static final char [] CODE_COLORS = { 'R', 'M', 'A', 'V', 'N', 'I' };
     static final int CODE_SIZE = 4, MAX_ATTEMPS = 15;
-    static final char COMPLETE_MATCH = 'X';
-    static final char COLOR_MATCH = '*';
+    static final char COMPLETE_MATCH = 'X', COLOR_MATCH = '*';
 
     final String code = generateCode ();
     int attemps;
 
     String generateCode () {
         StringBuilder result = new StringBuilder ();
-        Random random = new Random (System.nanoTime ());
+        Random random = new Random (nanoTime ());
 
         for (int ii = 0; ii < CODE_SIZE; ii++)
             result.append (CODE_COLORS [random.nextInt (CODE_COLORS.length)]);

@@ -1,4 +1,4 @@
-package fizzbuzz.java;
+package katayunos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * http://www.solveet.com/exercises/Kata-FizzBuzz/11
  */
-public class FizzBuzz {
+public class JFizzBuzz {
     public static List<String> fizzBuzz () {
         List<String> result = new ArrayList<String> (100);
 

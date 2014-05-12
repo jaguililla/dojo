@@ -1,10 +1,9 @@
-package fizzbuzz.groovy
+package katayunos
 
+import static GFizzBuzz.*
 import org.junit.Test
 
-import static fizzbuzz.groovy.FizzBuzz.fizzBuzz
-
-class FizzBuzzTest {
+class GFizzBuzzTest {
     @Test void "Not divisible between 3 or 5 returns the number" () {
         assert fizzBuzz[0] == "1"
     }

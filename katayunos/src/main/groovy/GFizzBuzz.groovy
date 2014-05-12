@@ -1,11 +1,11 @@
-package fizzbuzz.groovy
+package katayunos
 
 import groovy.transform.CompileStatic
 
 /**
  * http://www.solveet.com/exercises/Kata-FizzBuzz/11
  */
-class FizzBuzz {
+class GFizzBuzz {
     @CompileStatic private static List<String> fizzBuzz () {
         (1..100).collect {
             int number = (int)it // Required to compile statically

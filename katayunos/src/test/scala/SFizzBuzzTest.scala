@@ -1,12 +1,12 @@
-package fizzbuzz.scala
+package katayunos
 
 import org.junit.runner.RunWith
 import org.scalatest.FunSuite
-import FizzBuzz.fizzBuzz
+import SFizzBuzz.fizzBuzz
 import org.scalatest.junit.JUnitRunner
 
 @RunWith (classOf [JUnitRunner]) // Required to work in Gradle
-class FizzBuzzTest extends FunSuite {
+class SFizzBuzzTest extends FunSuite {
 
   test("Not divisible between 3 or 5 returns the number") {
     assert (fizzBuzz(0) == "1")

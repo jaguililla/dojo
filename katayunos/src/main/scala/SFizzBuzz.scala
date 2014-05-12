@@ -1,9 +1,9 @@
-package fizzbuzz.scala
+package katayunos
 
 /**
  * http://www.solveet.com/exercises/Kata-FizzBuzz/11
  */
-object FizzBuzz extends App {
+object SFizzBuzz extends App {
   /**
    * 1) Builds a range from 1 to 100
    * 2) Maps every value applying the closuse
