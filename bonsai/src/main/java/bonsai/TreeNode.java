@@ -51,11 +51,11 @@ public class TreeNode<T> {
      * </pre>
      *
      * @param aEntities List with entities. If 'null' or empty only the root node will be returned.
-     * @param aBuilder Provides logic to build the traversed table from entities. Can't be 'null'.
+     * @param aBuilder Provides logic to buildTree the traversed table from entities. Can't be 'null'.
      * @param <E> Leaves type.
      * @return The resulting tree.
      */
-    public static <E> TreeNode<?> build (List<E> aEntities, TreeBuilder<E> aBuilder) {
+    public static <E> TreeNode<?> buildTree (List<E> aEntities, TreeBuilder<E> aBuilder) {
         if (aBuilder == null)
             throw new IllegalArgumentException ("TreeBuilder can not be 'null'");
 
@@ -84,7 +84,10 @@ public class TreeNode<T> {
                 }
             }
 
-            pointer.children.add (new TreeNode<> (e, pointer));
+            // If a node with the value already exists, this entity is discarted
+            if (pointer.getChild (e) == null)
+                pointer.children.add (new TreeNode<> (e, pointer));
+
             pointer = root; // Set pointer to the root for the next row (leaf)
         }
 
@@ -92,7 +95,7 @@ public class TreeNode<T> {
     }
 
     public static <E extends Comparable<E> & TreeLeaf<E>>
-    TreeNode<?> build (List<E> aEntities) {
+    TreeNode<?> buildTree (List<E> aEntities) {
 
         // Root is empty node, pointer is used to traverse the tree while looping over entities
         TreeNode<?> root = new TreeNode<> ("ROOT"), pointer = root;
@@ -119,7 +122,10 @@ public class TreeNode<T> {
                 }
             }
 
-            pointer.children.add (new TreeNode<> (e, pointer));
+            // If a node with the value already exists, this entity is discarted
+            if (pointer.getChild (e) == null)
+                pointer.children.add (new TreeNode<> (e, pointer));
+
             pointer = root; // Set pointer to the root for the next row (leaf)
         }
 
@@ -171,6 +177,10 @@ public class TreeNode<T> {
             result = result.children.get (index);
 
         return result;
+    }
+
+    public Object getDescendentValue (int... aIndexes) {
+        return getDescendent (aIndexes).getValue ();
     }
 
     public T getValue () {
