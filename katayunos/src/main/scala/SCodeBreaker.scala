@@ -22,7 +22,7 @@ object SCodeBreaker {
 
   def attempts = mAttempts
 
-  // TODO Set as package private in default package (only for tests)
+  // TODO Set as package private (only for tests)
   private[katayunos] def reset {
     mAttempts = 0
   }

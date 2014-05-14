@@ -57,10 +57,10 @@ class SCodeBreakerTest extends FunSuite {
 
   test ("ResetCounter") {
     SCodeBreaker.reset
-    SCodeBreaker.check ("XXXX");
+    SCodeBreaker.check ("XXXX")
 
-    assert ("XXXX" == SCodeBreaker.check (SCodeBreaker.Code));
-    assert (0 == SCodeBreaker.attempts);
+    assert ("XXXX" == SCodeBreaker.check (SCodeBreaker.Code))
+    assert (0 == SCodeBreaker.attempts)
   }
 
   test ("Input Not Color") {

@@ -7,7 +7,7 @@ object SFizzBuzz extends App {
   /**
    * 1) Builds a range from 1 to 100
    * 2) Maps every value applying the closuse
-   * 3) The closure matches (pattern matching) a four elements tuple (i % 3, i % 5, i.toString...)
+   * 3) Closure matches (pattern matching) a four elements tuple (i % 3, i % 5, i.toString...)
    * 4) Each case is listed
    *
    * Easy to add, change and reorder cases
