@@ -1,6 +1,6 @@
 
 task wrapper (type: Wrapper) {
-    gradleVersion = '1.12'
+    gradleVersion = '2.0'
 }
 
 allprojects {
@@ -8,11 +8,19 @@ allprojects {
     apply plugin: 'eclipse'
 }
 
-// TODO Update to Java 8 when the Scala plugin supports it
 subprojects {
     apply plugin: 'java'
     apply plugin: 'scala'
     apply plugin: 'groovy'
+
+    apply plugin: 'checkstyle'
+    apply plugin: 'codenarc'
+    apply plugin: 'findbugs'
+//    apply plugin: 'jdepend'
+    apply plugin: 'pmd'
+    apply plugin: 'project-report'
+    apply plugin: 'jacoco'
+    apply plugin: 'build-dashboard'
 
     group = 'dojo'
     version = '0'
