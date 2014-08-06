@@ -13,14 +13,14 @@ subprojects {
     apply plugin: 'scala'
     apply plugin: 'groovy'
 
-    apply plugin: 'checkstyle'
-    apply plugin: 'codenarc'
-    apply plugin: 'findbugs'
+//    apply plugin: 'checkstyle'
+//    apply plugin: 'codenarc'
+//    apply plugin: 'findbugs'
 //    apply plugin: 'jdepend'
-    apply plugin: 'pmd'
-    apply plugin: 'project-report'
-    apply plugin: 'jacoco'
-    apply plugin: 'build-dashboard'
+//    apply plugin: 'pmd'
+//    apply plugin: 'project-report'
+//    apply plugin: 'jacoco'
+//    apply plugin: 'build-dashboard'
 
     group = 'dojo'
     version = '0'
@@ -40,12 +40,5 @@ subprojects {
         testCompile "junit:junit:4.11"
         testCompile "org.scalatest:scalatest_2.11:2.1.6"
         testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
-    }
-}
-
-project (':bonsai') {
-    dependencies{
-        testCompile "com.h2database:h2:1.4.177"
-        testCompile "com.google.guava:guava:16.0.1"
     }
 }
