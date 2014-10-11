@@ -1,2 +1,1 @@
-include 'katayunos'
-
+include 'katayunos', 'scalife'
