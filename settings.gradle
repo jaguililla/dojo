@@ -1,1 +1,1 @@
-include 'katayunos', 'scalife'
+include 'katayunos', 'scalife', 'demos', 'museum'

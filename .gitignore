@@ -1,8 +1,6 @@
 #
-# This file is ignored because of my global Git configuration, maybe is not needed in your
-# setup!
+# Gradle ignored directories
 #
-!/gradle/wrapper/gradle-wrapper.jar
 
-.gradle
+.gradle/
 build/

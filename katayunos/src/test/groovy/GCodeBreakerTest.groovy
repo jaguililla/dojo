@@ -7,7 +7,7 @@ import static GCodeBreaker.MAX_ATTEMPS
 import static GCodeBreaker.CODE_SIZE
 
 class GCodeBreakerTest {
-    private katayunos.GCodeBreaker codeBreaker = new katayunos.GCodeBreaker ()
+    private GCodeBreaker codeBreaker = new GCodeBreaker ()
 
     @Test void "Code Generated Has 4 Chars" () {
         assert CODE_SIZE == codeBreaker.generateCode ().length ()
