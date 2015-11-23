@@ -44,4 +44,15 @@ public class StateMachine<S extends Enum<?>, A extends Enum<?>> {
 
     @Override public String toString() {return super.toString (); }
 }
+
+class StateMachineExample {
+    enum Status { PENDING, ENQUEUED, CONFIRMED, FAILED }
+    enum Action { ACCEPT, PROCCESSED_OK, ERROR_THROWN, UPDATE }
+
+    public static void main (String... args) {
+        StateMachine<Status, Action> sm = new StateMachine<>(Status.PENDING);
+        sm.add (Status.PENDING, Action.ACCEPT, Status.ENQUEUED);
+        sm.perform (Action.ERROR_THROWN);
+    }
+}
 // E O F ///////////////////////////////////////////////////////////////////////////////////////////

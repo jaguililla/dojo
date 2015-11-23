@@ -41,7 +41,7 @@ public class EventBus {
     }
 
     private final Map<Class <? extends Event<?>>, Object> mmap =
-        new HashMap<Class <? extends Event<?>>, Object> ();
+        new HashMap<> ();
 
     public <X extends Event<?>> void addHandler (Class<X> aEvent, Handler<X> aHandler) {
         if (aEvent == null || aHandler == null)
@@ -50,7 +50,7 @@ public class EventBus {
         @SuppressWarnings ("unchecked")
         List<Handler<X>> handlers = (List<Handler<X>>)mmap.get (aEvent);
         if (handlers == null)
-            mmap.put (aEvent, handlers = new ArrayList<Handler<X>> ());
+            mmap.put (aEvent, handlers = new ArrayList<> ());
         handlers.add (aHandler);
     }
 
