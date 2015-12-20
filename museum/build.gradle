@@ -1,4 +1,7 @@
 
 dependencies{
     compile 'com.google.guava:guava:18.0'
+    compile 'com.github.insubstantial:substance:7.3'
+    compile 'de.sciss:weblaf:1.28'
+    compile 'com.fifesoft:rsyntaxtextarea:2.5.8'
 }
