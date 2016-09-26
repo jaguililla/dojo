@@ -12,6 +12,7 @@ package co.popapp.model;
 // I M P O R T /////////////////////////////////////////////////////////////////////////////////////
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import co.popapp.movier.Movier.Actor;
 
@@ -23,6 +24,7 @@ import co.popapp.log.Log;
  * TODO .
  * @author jamming
  */
+@Ignore
 public class EntityTest {
     private static final Log log = Log.getLog (EntityTest.class);
 
