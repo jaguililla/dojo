@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Mandatory information -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <!-- Page information -->
+    <meta name="description" content="Demo" />
+    <meta name="keywords" content="demo">
+
+    <title>Demo</title>
+
+    <!-- Styles -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" />
+
+    <!-- Icons -->
+    <link type="image/png" rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Author -->
+    <link rel="author" href="/humans.txt" />
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="messages" class="ui list">
+      <div class="item">
+        <img class="ui avatar image" src="https://semantic-ui.com/images/avatar2/small/rachel.png">
+        <div class="content">
+          <a class="header">Rachel</a>
+          <div class="description">Last seen watching <a><b>Arrested Development</b></a> just now.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="https://semantic-ui.com/images/avatar2/small/lindsay.png">
+        <div class="content">
+          <a class="header">Lindsay</a>
+          <div class="description">Last seen watching <a><b>Bob's Burgers</b></a> 10 hours ago.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="https://semantic-ui.com/images/avatar2/small/matthew.png">
+        <div class="content">
+          <a class="header">Matthew</a>
+          <div class="description">Last seen watching <a><b>The Godfather Part 2</b></a> yesterday.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/jenny.jpg">
+        <div class="content">
+          <a class="header">Jenny Hess</a>
+          <div class="description">Last seen watching <a><b>Twin Peaks</b></a> 3 days ago.</div>
+        </div>
+      </div>
+      <div class="item">
+        <img class="ui avatar image" src="https://semantic-ui.com/images/avatar/small/veronika.jpg">
+        <div class="content">
+          <a class="header">Veronika Ossi</a>
+          <div class="description">Has not watched anything recently</div>
+        </div>
+      </div>
+    </div>
+    <div class="ui action input">
+      <input type="text" placeholder="Send...">
+      <button id="btnSend" class="ui button">Send</button>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.2/sockjs.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vertx/3.4.1/vertx-eventbus.min.js"></script>
+
+  <script type="text/javascript" src="kotlin.js"></script>
+  <script type="text/javascript" src="kotlinx-html-js.js"></script>
+
+  <!--<script src="front_end_main.js"></script>-->
+  <script type="text/javascript" src="eventbus.js"></script>
+</html>

@@ -1,0 +1,31 @@
+#
+# Services needed for testing
+#
+
+version: '3'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - 27017:27017
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  # TODO Gnats
+  # TODO OpenStack Swift
+
+  api:
+    build:
+      context: ./api
+    environment:
+      - ENVIRONMENT=DEVELOPMENT
+    links:
+      - mongodb:mongodb
+      - rabbitmq:rabbitmq
+    ports:
+      - 7070:9090

@@ -1,0 +1,129 @@
+<!--
+ | POPAPP Copyright © 2011 Juan José Aguililla. All rights reserved.
+ |
+ | This program comes WITHOUT ANY WARRANTY; It is free software, you can redistribute it and/or
+ | modify it under the terms of the GNU General Public License, Version 3.0.
+ | You may obtain a copy of the License at: http://www.gnu.org/licenses/gpl.html
+ !-->
+
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://maven.apache.org/POM/4.0.0
+    http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- P A R E N T   P O M ================================================================ -->
+  <parent>
+    <groupId>co.popapp.maven</groupId>
+    <artifactId>root</artifactId>
+    <version>1.0.0</version>
+    <relativePath>maven/root/pom.xml</relativePath>
+  </parent>
+
+  <!-- C O R E   P R O P E R T I E S ====================================================== -->
+  <groupId>co.popapp</groupId>
+  <artifactId>popapp.co</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>POPAPP</name>
+  <description>POPAPP Framework</description>
+  <inceptionYear>2011</inceptionYear>
+  <url>https://popapp.co</url>
+  <licenses>
+    <license>
+      <name>GNU General Public License, Version 3.0</name>
+      <url>http://www.gnu.org/licenses/gpl.html</url>
+    </license>
+  </licenses>
+
+  <!-- D I S T R I B U T I O N ============================================================ -->
+  <scm>
+    <connection>scm:git:git://github.com/jamming/popapp.git</connection>
+    <developerConnection>scm:git:https://github.com/jamming/popapp.git</developerConnection>
+    <url>https://github.com/jamming/popapp</url>
+  </scm>
+
+  <distributionManagement>
+    <site>
+      <id>website</id>
+      <url>gitsite:git@github.com/jamming/popapp.git</url>
+    </site>
+
+    <repository>
+      <id>bintray-jamming-maven-popapp.co</id>
+      <name>jamming-maven-popapp.co</name>
+      <url>https://api.bintray.com/maven/jamming/maven/popapp.co</url>
+    </repository>
+  </distributionManagement>
+
+  <!-- O R G A N I Z A T I O N ============================================================ -->
+  <issueManagement>
+    <system>github</system>
+    <url>https://github.com/jamming/popapp/issues</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>http://travis-ci.org/jamming/popapp</url>
+  </ciManagement>
+
+  <!-- D E P E N D E N C I E S ============================================================ -->
+  <dependencies>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>18.0</version>
+    </dependency>
+
+    <!-- TESTS AND DEMOS -->
+    <!-- Weblaf not released in Maven Central (has to be installed in local repo from src) -->
+    <dependency>
+      <groupId>com.github.insubstantial</groupId>
+      <artifactId>substance</artifactId>
+      <version>7.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.alee</groupId>
+      <artifactId>weblaf</artifactId>
+      <version>1.29</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.fifesoft</groupId>
+      <artifactId>rsyntaxtextarea</artifactId>
+      <version>2.5.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.controlsfx</groupId>
+      <artifactId>controlsfx</artifactId>
+      <version>8.20.7</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jfxtras</groupId>
+      <artifactId>jfxtras-all</artifactId>
+      <version>8.0-r2</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

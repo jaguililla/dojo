@@ -25,12 +25,19 @@ interface Service {
     fun b(p: Boolean): Int
 }
 
+data class Key(val type: KClass<*>, val parameters: List<*>)
+
 /*
  * Generators registry and utilities
  */
-private var registry : Map<KClass<*>, () -> Any> = mapOf()
+private var registry : Map<KClass<*>, () -> Any> = emptyMap()
 
 fun <T : Any, R : T> register(type: KClass<T>, provider: () -> R) {
+    register(type, provider = provider)
+}
+
+fun <T : Any, R : T> register(
+        type: KClass<T>, vararg parameters: Any = emptyArray(), provider: () -> R) {
     registry += type to provider
 }
 

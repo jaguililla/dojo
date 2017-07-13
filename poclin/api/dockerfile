@@ -1,0 +1,6 @@
+
+FROM openjdk
+COPY build/install/api /opt/api
+WORKDIR /opt/api
+EXPOSE 9090
+ENTRYPOINT ["/opt/api/bin/api"]

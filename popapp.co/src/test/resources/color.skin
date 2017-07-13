@@ -1,0 +1,77 @@
+Active {
+    kind=Light
+    colorUltraLight=#F6F8FA
+    colorExtraLight=#DFE6ED
+    colorLight=#C1D6E9
+    colorMid=#A3B8CB
+    colorDark=#62778A
+    colorUltraDark=#42576A
+    colorForeground=#000000
+}
+
+Default {
+    kind=Light
+    colorUltraLight=#FFFFFF
+    colorExtraLight=#FFFFFF
+    colorLight=#F1F2F4
+    colorMid=#D6D9DF
+    colorDark=#95989E
+    colorUltraDark=#75787E
+    colorForeground=#2A2E36
+}
+
+Disabled {
+    kind=Light
+    colorUltraLight=#E3EFE9
+    colorExtraLight=#DFE2E6
+    colorLight=#DADDE3
+    colorMid=#D6D9DF
+    colorDark=#C9CCD2
+    colorUltraDark=#BCBFC5
+    colorForeground=#848B98
+}
+
+Pressed {
+    kind=Dark
+    colorUltraLight=#8FA9C0
+    colorExtraLight=#7695B2
+    colorLight=#5B89B4
+    colorMid=#33628C
+    colorDark=#1C3851
+    colorUltraDark=#000000
+    colorForeground=#FFFFFF
+}
+
+Rollover Selected {
+    kind=Light
+    colorUltraLight=#F8FAFC
+    colorExtraLight=#E8FDFF
+    colorLight=#D4E9FC
+    colorMid=#B6CBDE
+    colorDark=#3B556D
+    colorUltraDark=#00051D
+    colorForeground=#000000
+}
+
+Rollover Unselected {
+    kind=Light
+    colorUltraLight=#FFFFFF
+    colorExtraLight=#FDFDFE
+    colorLight=#F7F8FA
+    colorMid=#E9ECF2
+    colorDark=#7A7E86
+    colorUltraDark=#55585E
+    colorForeground=#2A2E36
+}
+
+Active Header {
+    kind=Dark
+    colorUltraLight=#0087C8
+    colorExtraLight=#0087C8
+    colorLight=#0087C8
+    colorMid=#033B5A
+    colorDark=#033B5A
+    colorUltraDark=#033B5A
+    colorForeground=#FFFFFF
+}
+

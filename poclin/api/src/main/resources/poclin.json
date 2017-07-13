@@ -1,0 +1,17 @@
+{
+  "mongodbUri" : "mongodb://127.0.0.1/swatlin",
+
+  "title" : "SWATlin",
+  "version" : "v1",
+  "mediaType" : "application/json",
+
+  "jwtSettings" : {
+    "tokenIdField" : "id",
+
+    "keyStore" : {
+      "path" : "keystore.jceks",
+      "type" : "jceks",
+      "password" : "secret"
+    }
+  }
+}

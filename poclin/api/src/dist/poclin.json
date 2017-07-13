@@ -1,0 +1,13 @@
+{
+  "mongodbUri" : "mongodb://127.0.0.1/swatlin",
+
+  "bindPort" : 9090,
+  "bindHost" : "0.0.0.0",
+
+  "jwtSettings" : {
+    "keyStore" : {
+      "path" : "keystore.jceks",
+      "password" : "secret"
+    }
+  }
+}

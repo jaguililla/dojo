@@ -1,0 +1,49 @@
+
+apply plugin: "kotlin2js"
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+    compile ("org.jetbrains.kotlin:kotlin-stdlib-js:$kotlinVersion")
+    compile ("org.jetbrains.kotlinx:kotlinx-html-js:$kotlinxHtmlVersion") {
+        exclude module: 'kotlin-stdlib-common'
+    }
+
+    testCompile ("org.jetbrains.kotlin:kotlin-test-js:$kotlinVersion")
+}
+
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.sourceMap = true
+}
+
+build.doLast {
+    configurations.compile.each { File file ->
+        copy {
+            from zipTree(file.absolutePath)
+            into "$project.buildDir/classes/main"
+
+            includeEmptyDirs = false
+            include { fileTreeElement ->
+                String path = fileTreeElement.path
+                boolean isResource =
+                    path.startsWith("META-INF/resources/") || !path.startsWith("META-INF/")
+                boolean isJavascript = path.endsWith("js")
+                isJavascript && isResource
+            }
+        }
+    }
+
+    copy {
+        from "$project.buildDir/classes/main"
+        into "$project.buildDir/web"
+    }
+
+    copy {
+        from "$project.buildDir/resources/main"
+        into "$project.buildDir/web"
+    }
+}
