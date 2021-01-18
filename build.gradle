@@ -1,18 +1,11 @@
 import static org.gradle.api.JavaVersion.VERSION_1_8
 
-buildscript {
-    repositories {
-        jcenter ()
-    }
+plugins {
+    id("idea")
+    id("eclipse")
 
-    dependencies {
-        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.9"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.4"
-    }
-}
-
-task wrapper (type: Wrapper) {
-    gradleVersion = '3.1'
+    id("org.jetbrains.kotlin.jvm") version("1.4.21") apply(false)
+    id("org.jetbrains.dokka") version("0.10.1") apply(false)
 }
 
 allprojects {
