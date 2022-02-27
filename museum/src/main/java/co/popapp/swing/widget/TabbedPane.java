@@ -49,8 +49,8 @@ public class TabbedPane extends JTabbedPane {
         tabbedPane.add ("A", new JLabel ("Pulsa Alt + Vocal"));
         tabbedPane.add ("E", new JLabel ("No quiero sus pestañas!!!"));
         tabbedPane.add ("I", new JLabel ("A la mierda!!!"));
-        tabbedPane.add ("O", new JLabel ("A Carrasco le gustan \"Los Chungitos\""));
-        tabbedPane.add ("U", new JLabel ("Y a Pitican le gusta lamer culos"));
+        tabbedPane.add ("O", new JLabel ("Te gustan \"Los Chunguitos\""));
+        tabbedPane.add ("U", new JLabel ("Y \"Gun's and Roses\""));
         tabbedPane.setMnemonic (0, "A");
         tabbedPane.setMnemonic (1, "E");
         tabbedPane.setMnemonic (2, "I");
